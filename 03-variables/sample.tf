@@ -50,5 +50,5 @@ output "fruits_stock_with_prices" {
 #
 #output "fruits_stock_with_prices" {
 #  value= var.fruits_stock_with_prices["banana"].price
-}
+#}
 

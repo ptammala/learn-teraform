@@ -27,3 +27,28 @@ output "fruits_with_stock"{
 }
 
 
+variable "fruits_stock_with_prices" {
+  default = {
+    apple= {
+      stock=200
+      price=5
+    }
+    banana = {
+      stock = 300
+      price = 10
+    }
+  }
+}
+
+output "fruits_stock_with_prices" {
+  value= var.fruits_stock_with_prices["apple"].stock
+}
+
+output "fruits_stock_with_prices" {
+  value= var.fruits_stock_with_prices["apple"].price
+}
+
+output "fruits_stock_with_prices" {
+  value= var.fruits_stock_with_prices["banana"].price
+}
+

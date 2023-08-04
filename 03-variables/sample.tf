@@ -4,6 +4,6 @@ variable "fruits" {
 }
 
 output "fruits names are "{
-  value= fruits[0]
+  value= var.fruits
 }
 

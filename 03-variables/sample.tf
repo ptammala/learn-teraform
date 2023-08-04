@@ -3,7 +3,7 @@ variable "fruits" {
 
 }
 
-output "fruits names are "{
+output "fruits"{
   value= var.fruits
 }
 

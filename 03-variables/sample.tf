@@ -1,5 +1,5 @@
 variable "fruits" {
-  default = [ "Apple", Banana]
+  default = [ "Apple", "Banana"]
 
 }
 

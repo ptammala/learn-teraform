@@ -15,17 +15,19 @@ variable "zone_id"{
   default = "Z06631553SNW6N7HBTCKR"
 }
 
-variable "components"{
-  frontend = { name = "frontend"}
-  mongodb =  { name = "mongodb" }
-  catalogue =  { name = "catalogue" }
-  redis =  { name = "redis" }
-  user =  { name = "user" }
-  cart =  { name = "cart" }
-  shipping =  { name = "shipping" }
-  rabbitmq =  { name = "rabbitmq" }
-  payment =  { name = "payment" }
-  dispatch = { name = "dispatch"}
+variable "components" {
+  default{
+    frontend  = { name = "frontend" }
+    mongodb   = { name = "mongodb" }
+    catalogue = { name = "catalogue" }
+    redis     = { name = "redis" }
+    user      = { name = "user" }
+    cart      = { name = "cart" }
+    shipping  = { name = "shipping" }
+    rabbitmq  = { name = "rabbitmq" }
+    payment   = { name = "payment" }
+    dispatch  = { name = "dispatch" }
+  }
 }
 
 output "components_names"{

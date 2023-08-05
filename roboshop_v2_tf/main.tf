@@ -1,3 +1,4 @@
+
 variable "ami"{
   default = "ami-03265a0778a880afb"
 }
@@ -24,7 +25,7 @@ variable "components"{
   shipping =  { name = "shipping" }
   rabbitmq =  { name = "rabbitmq" }
   payment =  { name = "payment" }
-  dispactch = { name = "dispactch"}
+  dispatch = { name = "dispatch"}
 }
 
 output "components_names"{

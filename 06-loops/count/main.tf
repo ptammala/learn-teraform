@@ -1,5 +1,5 @@
 variable "components" {
-  value=["frontend","mongodb"]
+  default=["frontend","mongodb"]
 }
 
 

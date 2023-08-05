@@ -3,10 +3,10 @@ variable "ami"{
   default = "ami-03265a0778a880afb"
 }
 
-#
-#variable "instance_type"{
-#  default = "t2.micro"
-#}
+
+variable "instance_type"{
+  default = "t2.micro"
+}
 
 variable "security_group_ids"{
   default = [ "sg-0b92db49845820fb2" ]
@@ -31,11 +31,11 @@ variable "components" {
     dispatch  = { name = "v1_dispatch" }
   }
 }
-#
-#output "components_names"{
-##  for_each = var.components
-#  value = var.components
-#}
+
+output "components_names"{
+#  for_each = var.components
+  value = var.components
+}
 #resource "aws_route53_record" "frontend" {
 #  zone_id = var.zone_id
 #  name    = "frontend.pdevopst74.online"

@@ -40,6 +40,21 @@ variable "fruits_stock_with_prices" {
   }
 }
 
+variable "fruit_details" {
+  default = {
+    apple=100
+    type="washington"
+    for_sale=true
+    price=10}
+}
+
+output "fruit_detailsD"{
+  value=var.fruit_details["apple"]
+
+}
+
+
+
 output "fruits_stock_with_prices" {
   value = var.fruits_stock_with_prices["apple"].stock
 #  value = var.fruits_stock_with_prices["apple"].price

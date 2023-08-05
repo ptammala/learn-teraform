@@ -47,12 +47,8 @@ output "fruits_stock_with_prices" {
 output "fruits_stock_with_prices1" {
     value = var.fruits_stock_with_prices["apple"].price
 }
-#
-#output "fruits_stock_with_prices" {
-#  value= var.fruits_stock_with_prices["apple"].price
-#}
-#
-#output "fruits_stock_with_prices" {
-#  value= var.fruits_stock_with_prices["banana"].price
-#}
 
+output "fruits_stock_with_prices2" {
+  value = "Apple Stock=${var.fruits_stock_with_prices["apple"].stock}"
+  #  value = var.fruits_stock_with_prices["apple"].price
+}

@@ -33,8 +33,9 @@ variable "components" {
 }
 
 output "components_names"{
-#  for_each = var.components
-  value = var.components
+  for_each = var.components
+  value = lookup(each.value,"name",null )
+#  value = var.components
 }
 #resource "aws_route53_record" "frontend" {
 #  zone_id = var.zone_id

@@ -3,10 +3,10 @@ variable "ami"{
   default = "ami-03265a0778a880afb"
 }
 
-
-variable "instance_type"{
-  default = "t2.micro"
-}
+#
+#variable "instance_type"{
+#  default = "t2.micro"
+#}
 
 variable "security_group_ids"{
   default = [ "sg-0b92db49845820fb2" ]

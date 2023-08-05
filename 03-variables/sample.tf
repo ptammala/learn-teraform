@@ -48,7 +48,7 @@ variable "fruit_details" {
     price=10}
 }
 
-output "fruit_detailsD"{
+output "fruitdetailsD"{
   value="${var.fruit_details["apple"]} , ${var.fruit_details["type"]}"
 
 }

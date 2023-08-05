@@ -49,7 +49,7 @@ variable "fruit_details" {
 }
 
 output "fruit_detailsD"{
-  value=var.fruit_details["apple"]
+  value="${var.fruit_details["apple"]} , ${var.fruit_details["type"]}"
 
 }
 

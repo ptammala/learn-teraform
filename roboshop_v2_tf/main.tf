@@ -16,7 +16,7 @@ variable "zone_id"{
 }
 
 variable "components" {
-  default{
+  default = {
     frontend  = { name = "frontend" }
     mongodb   = { name = "mongodb" }
     catalogue = { name = "catalogue" }
@@ -29,11 +29,11 @@ variable "components" {
     dispatch  = { name = "dispatch" }
   }
 }
-
-output "components_names"{
-#  for_each = var.components
-  value = var.components
-}
+#
+#output "components_names"{
+##  for_each = var.components
+#  value = var.components
+#}
 #resource "aws_route53_record" "frontend" {
 #  zone_id = var.zone_id
 #  name    = "frontend.pdevopst74.online"

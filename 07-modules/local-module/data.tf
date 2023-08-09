@@ -1,6 +1,7 @@
 data "aws_ami_ids" "ami" {
   owners = ["973714476881"]
-  stock = "Prakash"
+  name_regex = "Cento*"
+
 }
 
 output "ami"{
@@ -8,5 +9,5 @@ output "ami"{
 }
 
 output "ami_C"{
-  value = data.aws_ami_ids.ami.stock
+  value = data.aws_ami_ids.ami.name_regex
 }

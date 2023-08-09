@@ -48,3 +48,8 @@ resource "aws_route53_record" "record" {
   records = [lookup(lookup(aws_instance.instance,each.key,null),"private_ip",null)]
 #  records = [aws_instance.frontend.private_ip]
 }
+
+output "test"{
+  for_each = var.components
+  value = lookup(aws_instance.instance,each.key,null)
+}

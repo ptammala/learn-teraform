@@ -4,7 +4,5 @@ variable "fruits"{
 }
 
 output "fruits"{
-  value =element(var.fruits,2)
-#  value=var.fruits[2]
-
+  value = element(fruits,10 )
 }

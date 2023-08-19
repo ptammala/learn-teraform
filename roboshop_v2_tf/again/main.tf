@@ -5,12 +5,12 @@ variable "ami"{
 variable "instance_type"{
   default = "t2.micro"
 }
-variable "security_group_ids"{
-  default = [ "sg-0b92db49845820fb2" ]
-}
-variable "zone_id"{
-  default = "Z06631553SNW6N7HBTCKR"
-}
+#variable "security_group_ids"{
+#  default = [ "sg-0b92db49845820fb2" ]
+#}
+#variable "zone_id"{
+#  default = "Z06631553SNW6N7HBTCKR"
+#}
 
 variable "components" {
   default = {
@@ -31,8 +31,7 @@ resource "aws_instance" "instance" {
   for_each      = var.components
   ami           = var.ami
   instance_type = var.instance_type
-  tags = {
-    Name = lookup(var.components,each.key,null ) }
+  tags = { Name = lookup(var.components,each.key,null ) }
 }
 
 output "instances" {

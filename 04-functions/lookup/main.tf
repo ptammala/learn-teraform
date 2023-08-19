@@ -10,3 +10,7 @@ output "test" {
 output "test1" {
   value = lookup(var.test,"Z","Prakash" )
 }
+
+output "Concat" {
+  value = concat(["Vaisnika", "Vedhanshi"], ["Prakash","Navaneetha"],["Babu","Devavva"],["Anasuja","Tammala"])
+}

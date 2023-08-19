@@ -31,7 +31,7 @@ resource "aws_instance" "instance" {
   for_each      = var.components
   ami           = var.ami
   instance_type = var.instance_type
-  tags = { Name = lookup(var.components,each.key,null ) }
+  tags = { Name = lookup(each.value,"name",null ) }
 }
 
 output "instances" {

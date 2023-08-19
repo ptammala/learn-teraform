@@ -1,6 +1,6 @@
 
 data "aws_ami" "ami" {
 #  name = "Centos*"
-  owners = ["973714476881"]
+  owners = ["697388099436"]
 
 }

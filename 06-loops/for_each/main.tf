@@ -1,5 +1,6 @@
 variable "components"{
-  default = { forntend = { name = "frontend"},mongodb = { name = "mongodb"} }
+  default = { forntend = { name = "frontend"}
+    mongodb = { name = "mongodb"} }
 }
 
 resource "aws_security_group" "allow_tls" {

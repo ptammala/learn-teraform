@@ -14,16 +14,17 @@ variable "instance_type"{
 
 variable "components" {
   default = {
-    frontend  = {}
-    mongodb   = {}
-    catalogue = {}
-    redis     = {}
-    user      = {}
-    cart      = {}
-    mysql     = {}
-    shipping  = {}
-    payment   = {}
-    rabbitmq  = {}
+    frontend  = { name = frontend_dev }
+    mongodb   = { name = mongodb_dev }
+    catalogue = { name = catalogue_dev }
+    redis     = { name = redis_dev }
+    user      = { name = user_dev }
+    cart      = { name = cart_dev }
+    mysql     = { name = mysql_dev }
+    shipping  = { name = shipping_dev }
+    payment   = { name = payment_dev }
+    rabbitmq  = { name = rabbitmq_dev }
+    rabbitmq  = { name = rabbitmq_dev }
   }
 }
 

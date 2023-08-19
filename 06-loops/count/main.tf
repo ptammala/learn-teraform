@@ -2,6 +2,19 @@ variable "components" {
   default=[ "catalogue","frontend","mongodb"]
 }
 
+
+### Creating ec2 instant using for_each loop
+resource "aws_instance" "web" {
+  for_each = var.components
+  ami           = "ami-03265a0778a880afb"
+  instance_type = "t2.micro"
+  tags = {
+    Name = element(var.components,count.index)
+  }
+}
+
+
+
 #
 #resource "aws_instance" "instance" {
 #  count = length(var.components)
@@ -16,7 +29,7 @@ variable "components" {
 #  }
 #}
 
-#
+#### Creating ec2 instant using count loop
 #resource "aws_instance" "web" {
 #  count = length(var.components)
 #
@@ -27,6 +40,8 @@ variable "components" {
 #  }
 #}
 
+
+################Creating a security group using count loop
 resource "aws_security_group" "allow_tls" {
 
   count = length(var.components)

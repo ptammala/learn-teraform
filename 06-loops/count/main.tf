@@ -1,5 +1,5 @@
 variable "components" {
-  default=[ "catalogue","frontend","mongodb"]
+  default=[ "frontend","mongodb"]
 }
 
 #
@@ -16,12 +16,21 @@ variable "components" {
 #  }
 #}
 
-resource "aws_instance" "web" {
+#
+#resource "aws_instance" "web" {
+#  count = length(var.components)
+#
+#  ami           = "ami-03265a0778a880afb"
+#  instance_type = "t2.micro"
+#  tags = {
+#    Name = element(var.components,count.index)
+#  }
+#}
+
+resource "aws_security_group" "allow_tls" {
+
   count = length(var.components)
 
-  ami           = "ami-03265a0778a880afb"
-  instance_type = "t2.micro"
-  tags = {
-    Name = element(var.components,count.index)
-  }
+  name        = element(var.components,count.index )
+
 }

@@ -1,5 +1,5 @@
 variable "components"{
-  default = { forntend = { name = "frontend_s"}
+  default = { forntend = { name = "frontend_s"},
     mongodb = { name = "mongodb_s"} }
 }
 

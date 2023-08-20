@@ -9,11 +9,11 @@ variable "security_group" {
 variable "component" {
   default = {
     frontend = {
-      name = "frontend_sg"
+      name = "frontend"
       instant_type = "t2.micro"
     }
     cart = {
-      name = "cart_sg"
+      name = "cart"
       instant_type = "t2.micro"
     }
 

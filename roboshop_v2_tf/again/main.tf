@@ -34,7 +34,6 @@ resource "aws_instance" "instance" {
   instance_type = var.instance_type
   tags = { Name = lookup(each.value,"name",null ) }
 }
-
-output "instance" {
+output "insta" {
   value = aws_instance.instance
 }

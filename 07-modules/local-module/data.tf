@@ -17,6 +17,8 @@ output "ami2"{
 resource "aws_instance" "instance" {
 
   ami = data.aws_ami.ami.id
-  instance_type = "t2.micro"
+  instance_type = var.instant_type
   vpc_security_group_ids = [ "sg-0b92db49845820fb2" ]
 }
+
+variable "instant_type" {}

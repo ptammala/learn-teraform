@@ -1,5 +1,5 @@
 module "components"{
-  for_each          = var.components
+  for_each          = var.component
 
   source            = "./module"
   zone_id           = var.zone_id

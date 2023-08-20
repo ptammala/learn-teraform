@@ -6,7 +6,7 @@ variable "security_group" {
   default = [ "sg-0b92db49845820fb2" ]
 }
 
-variable "components" {
+variable "component" {
   default = {
     frontend = {
       name = "frontend_sg"

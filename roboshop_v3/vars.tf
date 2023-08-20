@@ -16,6 +16,10 @@ variable "component" {
       name = "cart"
       instant_type = "t2.micro"
     }
+    mongodb = {
+      name = "mongodb"
+      instant_type = "t2.micro"
+    }
 
   }
 }

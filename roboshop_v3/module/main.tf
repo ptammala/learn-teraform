@@ -15,5 +15,17 @@ resource "aws_route53_record" "record" {
   type                       = "A"
   ttl                        = 30
   records                    = [aws_instance.instance.private_ip]
+
+}
+
+resource "null_resource" "ansible" {
+  provisioner "local-exec" {
+    commond = <<EOF
+cd /home/centos/roboshop-ansible
+git pull
+ansible-playbook -i "${var.name}.pdevopst74.online", main.yml -e ansible_user=centos ansible_password=DevOps321 -e component="${var.name}"
+EOF
+  }
+
 }
 

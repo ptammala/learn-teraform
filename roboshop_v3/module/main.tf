@@ -21,7 +21,7 @@ resource "aws_route53_record" "record" {
 resource "null_resource" "ansible" {
   depends_on = [ aws_route53_record.record ]
   provisioner "local-exec" {
-    commond = <<EOF
+    command = <<EOF
 cd /home/centos/roboshop-ansible
 git pull
 sleep 15
